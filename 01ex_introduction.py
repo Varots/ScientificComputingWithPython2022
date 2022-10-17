@@ -70,10 +70,12 @@ for x in l:
 print(unique)
 
 #esercizio6
-x=input("Inserisci qualcosa:")
-y=input("Inserisci qualcos'altro:")
+p=input("Inserisci qualcosa:")
+q=input("Inserisci qualcos'altro:")
 try:
-	z=x+y
+	q=float (q)
+	p=float (p)
+	z=p+q
 	print(z)
 except:
 	print("Addizione non possibile")
@@ -104,7 +106,26 @@ while(c<limite):
 def_tuple= tuple(l)
 print(def_tuple)
 ##esercizio10
-numbers=[7,32,48,55,66,34,02,325]
+norm=0
+somma=0
+numbers=[7,32,48,55,66,34,22,325]
+for x in numbers:
+	norm= norm+ x**2
+norm=math.sqrt(norm)
+for i in range(len(numbers)):
+	numbers[i]=numbers[i]/norm
+	somma=somma+numbers[i]**2
+
+
+print(somma)
+print(numbers)
+
+##es10
+fib=[0,1]
+while len(fib)<20:
+	fib.append(fib[len(fib)-1]+fib[len(fib)-2])
+
+print(fib)
 
 
 
